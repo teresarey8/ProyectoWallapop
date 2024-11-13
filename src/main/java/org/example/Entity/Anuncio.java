@@ -1,13 +1,14 @@
 package org.example.Entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.* ;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.util.Locale;
 
 @Data
 @NoArgsConstructor
@@ -31,6 +32,8 @@ public class Anuncio {
     //el lob es una entidad de anotacion para las textarea, que es lo que considero que es una descripcion
     @Lob
     private String descripcion;
+    private LocalDate fechaCreacion;
+    private String Foto;
 
 }
 
